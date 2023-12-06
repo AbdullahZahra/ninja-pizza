@@ -1,27 +1,62 @@
 <?php
 
-define('NAME', 'Yoshi');
+// indexed arrays
 
-// $name = 'Yoshi';
-$age = 30;
+$peopleOne = ['shaun', 'crystal', 'ryu'];
 
-// $name = 'Mario';
+// echo $peopleOne[1];
 
+$peopleTwo = array('ken', 'chun-li');
+// echo $peopleTwo[1];
+
+$ages = [20, 30, 40, 50];
+// print_r($ages);
+
+$ages[1] = 25;
+// print_r($ages);
+
+$ages[] = 60;
+// print_r($ages);
+
+array_push($ages, 70);
+// print_r($ages);
+
+// echo count($ages);
+
+$peopleThree = array_merge($peopleOne, $peopleTwo);
+// print_r($peopleThree);
+
+// associative arrays (key & value pairs)
+
+$ninjasOne = ['shaun' => 'black', 'mario' => 'orange', 'luigi' => 'brown'];
+// echo $ninjasOne['mario'];
+// print_r($ninjasOne);
+
+$ninjasTwo = array('bowser' => 'green', 'peach' => 'yellow');
+// print_r($ninjasTwo);
+
+$ninjasTwo['peach'] = 'pink';
+// print_r($ninjasTwo);
+
+// echo count($ninjasOne);
+
+$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+print_r($ninjasThree);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First PHP File</title>
 </head>
-<body>
-    
-    <h1>User Profile Page</h1>
 
-    <div><?php echo NAME ?></div>
-    <div><?php echo $age; ?></div>
+<body>
+
+
 
 </body>
+
 </html>
