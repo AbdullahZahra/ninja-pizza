@@ -1,47 +1,24 @@
 <?php
 
-// indexed arrays
+// mulit-dimensional arrays
 
-$peopleOne = ['shaun', 'crystal', 'ryu'];
+$blogs = [
+    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 30],
+    ['title' => 'mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 25],
+    ['title' => 'zelad hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
+];
 
-// echo $peopleOne[1];
+// print_r($blogs[1][1]);
+// echo $blogs[2]['author'];
+// echo count($blogs);
 
-$peopleTwo = array('ken', 'chun-li');
-// echo $peopleTwo[1];
+$blogs[] = ['title' => 'castle paryt', 'author' => 'peach', 'content' => 'lorem', 'likes' => 100];
 
-$ages = [20, 30, 40, 50];
-// print_r($ages);
+// print_r($blogs);
 
-$ages[1] = 25;
-// print_r($ages);
+$popped = array_pop($blogs);
+print_r($popped);
 
-$ages[] = 60;
-// print_r($ages);
-
-array_push($ages, 70);
-// print_r($ages);
-
-// echo count($ages);
-
-$peopleThree = array_merge($peopleOne, $peopleTwo);
-// print_r($peopleThree);
-
-// associative arrays (key & value pairs)
-
-$ninjasOne = ['shaun' => 'black', 'mario' => 'orange', 'luigi' => 'brown'];
-// echo $ninjasOne['mario'];
-// print_r($ninjasOne);
-
-$ninjasTwo = array('bowser' => 'green', 'peach' => 'yellow');
-// print_r($ninjasTwo);
-
-$ninjasTwo['peach'] = 'pink';
-// print_r($ninjasTwo);
-
-// echo count($ninjasOne);
-
-$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
-print_r($ninjasThree);
 ?>
 
 <!DOCTYPE html>
